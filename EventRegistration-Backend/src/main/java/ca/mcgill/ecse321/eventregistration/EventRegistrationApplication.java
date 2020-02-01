@@ -15,7 +15,7 @@ public class EventRegistrationApplication {
 
 	@RequestMapping("/")
 	public String greeting(){
-		return "Bonnie is an elephant.\n"
+		return "Bonnie is an elephant!\n"
 				"                            _\n" +
 				"                          .' `'.__\n" +
 				"                         /      \\ `'\"-,\n" +
