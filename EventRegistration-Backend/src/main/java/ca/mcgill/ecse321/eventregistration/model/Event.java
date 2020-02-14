@@ -28,13 +28,13 @@ public void setName(String value) {
 public String getName() {
     return this.name;
 }
-private Date eventDate;
+private Date date;
 
-public void setEventDate(Date value) {
-    this.eventDate = value;
+public void setDate(Date value) {
+    this.date = value;
 }
-public Date getEventDate() {
-    return this.eventDate;
+public Date getDate() {
+    return this.date;
 }
 private Time startTime;
 

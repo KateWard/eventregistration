@@ -1,7 +1,6 @@
 package ca.mcgill.ecse321.eventregistration.model;
 
 import javax.persistence.Entity;
-import ca.mcgill.ecse321.eventregistration.model.Person;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
@@ -9,15 +8,15 @@ import javax.persistence.Id;
 
 @Entity
 public class RegistrationManager{
-   private Set<Person> participants;
+   private Set<Person> person;
    
    @OneToMany(cascade={CascadeType.ALL})
-   public Set<Person> getParticipants() {
-      return this.participants;
+   public Set<Person> getPerson() {
+      return this.person;
    }
    
-   public void setParticipants(Set<Person> participantss) {
-      this.participants = participantss;
+   public void setPerson(Set<Person> persons) {
+      this.person = persons;
    }
    
    private Set<Event> events;
@@ -31,15 +30,15 @@ public class RegistrationManager{
       this.events = eventss;
    }
    
-   private Set<Registration> registrations;
+   private Set<Registration> registration;
    
    @OneToMany(cascade={CascadeType.ALL})
-   public Set<Registration> getRegistrations() {
-      return this.registrations;
+   public Set<Registration> getRegistration() {
+      return this.registration;
    }
    
-   public void setRegistrations(Set<Registration> registrationss) {
-      this.registrations = registrationss;
+   public void setRegistration(Set<Registration> registrations) {
+      this.registration = registrations;
    }
    
    private Integer id;

@@ -1,33 +1,31 @@
 package ca.mcgill.ecse321.eventregistration.model;
 
 import javax.persistence.Entity;
-import java.util.Set;
-import javax.persistence.ManyToMany;
-import ca.mcgill.ecse321.eventregistration.model.Person;
+import javax.persistence.ManyToOne;
 import javax.persistence.Id;
 
 @Entity
 public class Registration{
-   private Set<Event> events;
+   private Event event;
    
-   @ManyToMany
-   public Set<Event> getEvents() {
-      return this.events;
+   @ManyToOne(optional=false)
+   public Event getEvent() {
+      return this.event;
    }
    
-   public void setEvents(Set<Event> eventss) {
-      this.events = eventss;
+   public void setEvent(Event event) {
+      this.event = event;
    }
    
-   private Set<Person> participant;
+   private Person person;
    
-   @ManyToMany
-   public Set<Person> getParticipant() {
-      return this.participant;
+   @ManyToOne(optional=false)
+   public Person getPerson() {
+      return this.person;
    }
    
-   public void setParticipant(Set<Person> participants) {
-      this.participant = participants;
+   public void setPerson(Person person) {
+      this.person = person;
    }
    
    private Integer id;
